@@ -3,6 +3,9 @@
 	box-sizing: border-box;
 }
 
+html{
+	overflow-x: hidden;
+}
 body {
 	padding: 20px;
 	font-size: 1.2rem;
@@ -21,7 +24,7 @@ body {
 .d-grid--2cols {
 	grid-template-columns: 1fr 2fr;
 	justify-content: center;
-	align-items: flex-start;
+	align-items: flex-end;
 }
 
 /* Flex layout:button stack */
@@ -76,8 +79,23 @@ p {
 	color: #818181;
 }
 
+.heroimg{
+	background: #5decb5 url(./images/humour.jpg)no-repeat center center/ cover;
+	position: relative;
+	width:100%;
+	height:100vh;
+	display: grid;
+	justify-items: center;
+	align-items: center;
+	}
+.hero__overlay{
+	background: rgba(0,0,0,0.4);
+	padding:1rem 2rem;
+	width:70%;
+	min-height:60%;
+	}
 /* Style for small screen */
-@media (max-width: 650px) {
+@media (max-width: 790px) {
 	.container {
 		width: 100%;
 	}
@@ -97,5 +115,10 @@ p {
 
 	h2 {
 		font-size: 1.5rem;
+	}
+	.hero__overlay{
+		padding:1rem;
+		width:100%;
+	min-height:100%;
 	}
 }
